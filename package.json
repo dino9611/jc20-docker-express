@@ -1,0 +1,22 @@
+{
+  "name": "docker-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "docker build -t jc20-express .",
+    "container": "docker container run -d --name jc20-docker-express -p 5000:5000  jc20-express",
+    "delete": "docker container rm jc20-docker-express --force",
+    "deploy": "npm run build && npm run delete && npm run container",
+    "tes": "export nama=dio && sh start.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mysql2": "^2.3.3"
+  }
+}
