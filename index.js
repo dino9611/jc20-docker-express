@@ -4,7 +4,7 @@ const app = express();
 
 app.get("/", (req, res) => {
   res.status(200).send({
-    message: "dari vps server",
+    message: "dari vps server v 2.0",
   });
 });
 
